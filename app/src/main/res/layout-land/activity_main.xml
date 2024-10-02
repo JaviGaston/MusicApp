@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b9d3ef"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/imageButtonplay"
+        android:layout_width="127dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonNext"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonShare"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/seekBarProgress"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonPrevious"
+        app:srcCompat="@drawable/playpeque" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPrevious"
+        android:layout_width="127dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonplay"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonList"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/seekBarProgress"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSong"
+        app:srcCompat="@drawable/anteriorpeque" />
+
+    <ImageButton
+        android:id="@+id/imageButtonNext"
+        android:layout_width="127dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonLyrics"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/seekBarProgress"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonplay"
+        app:srcCompat="@drawable/siguientepeque" />
+
+    <ImageView
+        android:id="@+id/imageViewCd"
+        android:layout_width="377dp"
+        android:layout_height="310dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarProgress"
+        app:layout_constraintEnd_toStartOf="@+id/textViewFinishTime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewProgressTime"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/imagen" />
+
+    <TextView
+        android:id="@+id/textViewArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ed Sheeran"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewSong"
+        app:layout_constraintEnd_toEndOf="@id/imageButtonList"
+        app:layout_constraintStart_toStartOf="@id/imageButtonPrevious"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="625dp" />
+
+    <TextView
+        android:id="@+id/textViewSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shape of you"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonList"
+        app:layout_constraintEnd_toEndOf="@id/imageButtonList"
+        app:layout_constraintStart_toStartOf="@id/imageButtonPrevious"
+        app:layout_constraintTop_toBottomOf="@+id/textViewArtist"
+        tools:layout_editor_absoluteX="635dp" />
+
+    <SeekBar
+        android:id="@+id/seekBarProgress"
+        android:layout_width="484dp"
+        android:layout_height="44dp"
+        android:max="100"
+        android:progress="25"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarVolume"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonPrevious"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCd" />
+
+    <TextView
+        android:id="@+id/textViewProgressTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01:00"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewCd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/seekBarProgress"
+        app:layout_constraintTop_toBottomOf="@id/imageViewCd"
+        tools:layout_editor_absoluteY="341dp" />
+
+    <TextView
+        android:id="@+id/textViewFinishTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-03:00"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonplay"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCd"
+        app:layout_constraintBottom_toTopOf="@id/seekBarProgress"
+        app:layout_constraintTop_toBottomOf="@id/imageViewCd"
+        tools:layout_editor_absoluteY="341dp" />
+
+    <ImageButton
+        android:id="@+id/imageButtonList"
+        android:layout_width="127dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonShare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonPrevious"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSong"
+        app:srcCompat="@drawable/listapeque" />
+
+    <ImageButton
+        android:id="@+id/imageButtonShare"
+        android:layout_width="127dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonLyrics"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonplay"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonList"
+        app:srcCompat="@drawable/compartirpeque" />
+
+    <ImageButton
+        android:id="@+id/imageButtonLyrics"
+        android:layout_width="127dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonNext"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonShare"
+        app:srcCompat="@drawable/letrapeque" />
+
+    <SeekBar
+        android:id="@+id/seekBarVolume"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="362dp"
+        android:layout_height="32dp"
+        android:max="10"
+        android:progress="7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarProgress"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewVolume"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarProgress" />
+
+    <ImageView
+        android:id="@+id/imageViewVolume"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintEnd_toStartOf="@+id/seekBarVolume"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/seekBarProgress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarProgress"
+        app:srcCompat="@drawable/volumenpeque"
+        tools:layout_editor_absoluteY="437dp" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPause"
+        android:layout_width="127dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonNext"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonShare"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/seekBarProgress"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonPrevious"
+        android:visibility="gone"
+        app:srcCompat="@drawable/pausepeque" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
