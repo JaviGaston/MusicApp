@@ -182,6 +182,7 @@
         android:id="@+id/imageButtonPause"
         android:layout_width="127dp"
         android:layout_height="100dp"
+        android:backgroundTint="#2692ec"
         app:layout_constraintBottom_toTopOf="@+id/imageButtonNext"
         app:layout_constraintEnd_toStartOf="@+id/imageButtonShare"
         app:layout_constraintHorizontal_bias="0.5"
