@@ -5,14 +5,17 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Slider
@@ -25,7 +28,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
 
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
@@ -68,7 +73,7 @@ fun MusicAppInterface() {
                 .padding(30.dp)
                 .fillMaxHeight()
         ) {
-            Row(modifier = Modifier.padding(16.dp)) {
+            Row(modifier = Modifier.padding(30.dp)) {
                 Image(
                     painter = painterResource(id = R.drawable.imagen),
                     contentDescription = "Imagen personalizada",
@@ -92,7 +97,9 @@ fun MusicAppInterface() {
             Row(horizontalArrangement = Arrangement.Center, modifier = Modifier.padding(20.dp)) {
                 LinearProgressIndicator(
                     progress = { 0.25f },
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier
+                        .height(6.dp)
+                        .fillMaxWidth(),
                 )
             }
             Row(
@@ -137,12 +144,17 @@ fun MusicAppInterface() {
                 ) {
                     IconButton(
                         onClick = {},
-                        modifier = Modifier.size(45.dp)
+                        modifier = Modifier
+                            .size(50.dp)
+                            .clip(shape = CutCornerShape(0.dp))
+                            .background(color = Color(0xFF2692EC))
                     ) {
                         Image(
                             painter = painterResource(id = R.drawable.anteriorpeque),
                             contentDescription = "Botón de canción anterior",
-                            modifier = Modifier.size(45.dp)
+                            modifier = Modifier
+                                .size(30.dp)
+                                .clip(shape = CutCornerShape(0.dp))
                         )
 
                     }
@@ -156,7 +168,7 @@ fun MusicAppInterface() {
                     val isPlaying = remember { mutableStateOf(false) }
                     if (isPlaying.value) {
                         IconButton(
-                            onClick = {isPlaying.value = false},
+                            onClick = { isPlaying.value = false },
                             modifier = Modifier.size(45.dp)
                         ) {
                             Image(
@@ -165,15 +177,20 @@ fun MusicAppInterface() {
                                 modifier = Modifier.size(45.dp)
                             )
                         }
-                    } else{
+                    } else {
                         IconButton(
-                            onClick = {isPlaying.value = true},
-                            modifier = Modifier.size(45.dp)
+                            onClick = { isPlaying.value = true },
+                            modifier = Modifier
+                                .size(50.dp)
+                                .clip(shape = CutCornerShape(0.dp))
+                                .background(color = Color(0xFF2692EC))
                         ) {
                             Image(
                                 painter = painterResource(id = R.drawable.playpeque),
                                 contentDescription = "Botón de reproducción",
-                                modifier = Modifier.size(45.dp)
+                                modifier = Modifier
+                                    .size(30.dp)
+                                    .clip(shape = CutCornerShape(0.dp))
                             )
                         }
 
@@ -187,12 +204,17 @@ fun MusicAppInterface() {
                 ) {
                     IconButton(
                         onClick = {},
-                        modifier = Modifier.size(45.dp)
+                        modifier = Modifier
+                            .size(50.dp)
+                            .clip(shape = CutCornerShape(0.dp))
+                            .background(color = Color(0xFF2692EC))
                     ) {
                         Image(
                             painter = painterResource(id = R.drawable.siguientepeque),
                             contentDescription = "Botón de canción siguiente",
-                            modifier = Modifier.size(45.dp)
+                            modifier = Modifier
+                                .size(30.dp)
+                                .clip(shape = CutCornerShape(0.dp))
                         )
 
                     }
@@ -211,12 +233,17 @@ fun MusicAppInterface() {
                 ) {
                     IconButton(
                         onClick = {},
-                        modifier = Modifier.size(45.dp)
+                        modifier = Modifier
+                            .size(50.dp)
+                            .clip(shape = CutCornerShape(0.dp))
+                            .background(color = Color(0xFF2692EC))
                     ) {
                         Image(
                             painter = painterResource(id = R.drawable.listapeque),
                             contentDescription = "Botón de lista de canciones",
-                            modifier = Modifier.size(45.dp)
+                            modifier = Modifier
+                                .size(30.dp)
+                                .clip(shape = CutCornerShape(0.dp))
                         )
 
                     }
@@ -229,12 +256,17 @@ fun MusicAppInterface() {
                 ) {
                     IconButton(
                         onClick = {},
-                        modifier = Modifier.size(45.dp)
+                        modifier = Modifier
+                            .size(50.dp)
+                            .clip(shape = CutCornerShape(0.dp))
+                            .background(color = Color(0xFF2692EC))
                     ) {
                         Image(
                             painter = painterResource(id = R.drawable.compartirpeque),
                             contentDescription = "Botón de compartir",
-                            modifier = Modifier.size(45.dp)
+                            modifier = Modifier
+                                .size(30.dp)
+                                .clip(shape = CutCornerShape(0.dp))
                         )
 
                     }
@@ -247,12 +279,17 @@ fun MusicAppInterface() {
                 ) {
                     IconButton(
                         onClick = {},
-                        modifier = Modifier.size(45.dp)
+                        modifier = Modifier
+                            .size(50.dp)
+                            .clip(shape = CutCornerShape(0.dp))
+                            .background(color = Color(0xFF2692EC))
                     ) {
                         Image(
                             painter = painterResource(id = R.drawable.letrapeque),
                             contentDescription = "Botón de letra",
-                            modifier = Modifier.size(45.dp)
+                            modifier = Modifier
+                                .size(30.dp)
+                                .clip(shape = CutCornerShape(0.dp))
                         )
 
                     }
@@ -292,22 +329,26 @@ fun MusicAppInterfaceLandscape() {
         Row(modifier = Modifier.fillMaxWidth()) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier.weight(1f)
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(20.dp)
             ) {
-                Row(modifier = Modifier.padding(16.dp)) {
+                Row(verticalAlignment = Alignment.Bottom, modifier = Modifier.padding(5.dp)) {
                     Image(
                         painter = painterResource(id = R.drawable.imagen),
                         contentDescription = "Imagen personalizada",
-                        modifier = Modifier.size(300.dp)
+                        modifier = Modifier.size(230.dp)
                     )
                 }
                 Row(
                     horizontalArrangement = Arrangement.Center,
-                    modifier = Modifier.padding(20.dp)
+                    modifier = Modifier.padding(5.dp)
                 ) {
                     LinearProgressIndicator(
                         progress = { 0.25f },
-                        modifier = Modifier.fillMaxWidth(),
+                        modifier = Modifier
+                            .height(6.dp)
+                            .fillMaxWidth(),
                     )
                 }
                 Row(
@@ -397,23 +438,33 @@ fun MusicAppInterfaceLandscape() {
                 ) {
                     IconButton(
                         onClick = {},
-                        modifier = Modifier.size(45.dp)
+                        modifier = Modifier
+                            .size(50.dp)
+                            .clip(shape = CutCornerShape(0.dp))
+                            .background(color = Color(0xFF2692EC))
                     ) {
                         Image(
                             painter = painterResource(id = R.drawable.anteriorpeque),
                             contentDescription = "Botón de canción anterior",
-                            modifier = Modifier.size(45.dp)
+                            modifier = Modifier
+                                .size(30.dp)
+                                .clip(shape = CutCornerShape(0.dp))
                         )
 
                     }
                     IconButton(
                         onClick = {},
-                        modifier = Modifier.size(45.dp)
+                        modifier = Modifier
+                            .size(50.dp)
+                            .clip(shape = CutCornerShape(0.dp))
+                            .background(color = Color(0xFF2692EC))
                     ) {
                         Image(
                             painter = painterResource(id = R.drawable.listapeque),
                             contentDescription = "Botón de lista de canciones",
-                            modifier = Modifier.size(45.dp)
+                            modifier = Modifier
+                                .size(30.dp)
+                                .clip(shape = CutCornerShape(0.dp))
                         )
 
                     }
@@ -428,7 +479,7 @@ fun MusicAppInterfaceLandscape() {
                     val isPlaying = remember { mutableStateOf(false) }
                     if (isPlaying.value) {
                         IconButton(
-                            onClick = {isPlaying.value = false},
+                            onClick = { isPlaying.value = false },
                             modifier = Modifier.size(45.dp)
                         ) {
                             Image(
@@ -437,27 +488,37 @@ fun MusicAppInterfaceLandscape() {
                                 modifier = Modifier.size(45.dp)
                             )
                         }
-                    } else{
+                    } else {
                         IconButton(
-                            onClick = {isPlaying.value = true},
-                            modifier = Modifier.size(45.dp)
+                            onClick = { isPlaying.value = true },
+                            modifier = Modifier
+                                .size(50.dp)
+                                .clip(shape = CutCornerShape(0.dp))
+                                .background(color = Color(0xFF2692EC))
                         ) {
                             Image(
                                 painter = painterResource(id = R.drawable.playpeque),
                                 contentDescription = "Botón de reproducción",
-                                modifier = Modifier.size(45.dp)
+                                modifier = Modifier
+                                    .size(30.dp)
+                                    .clip(shape = CutCornerShape(0.dp))
                             )
                         }
 
                     }
                     IconButton(
                         onClick = {},
-                        modifier = Modifier.size(45.dp)
+                        modifier = Modifier
+                            .size(50.dp)
+                            .clip(shape = CutCornerShape(0.dp))
+                            .background(color = Color(0xFF2692EC))
                     ) {
                         Image(
                             painter = painterResource(id = R.drawable.compartirpeque),
                             contentDescription = "Botón de compartir",
-                            modifier = Modifier.size(45.dp)
+                            modifier = Modifier
+                                .size(30.dp)
+                                .clip(shape = CutCornerShape(0.dp))
                         )
 
                     }
@@ -470,23 +531,33 @@ fun MusicAppInterfaceLandscape() {
                 ) {
                     IconButton(
                         onClick = {},
-                        modifier = Modifier.size(45.dp)
+                        modifier = Modifier
+                            .size(50.dp)
+                            .clip(shape = CutCornerShape(0.dp))
+                            .background(color = Color(0xFF2692EC))
                     ) {
                         Image(
                             painter = painterResource(id = R.drawable.siguientepeque),
                             contentDescription = "Botón de canción siguiente",
-                            modifier = Modifier.size(45.dp)
+                            modifier = Modifier
+                                .size(30.dp)
+                                .clip(shape = CutCornerShape(0.dp))
                         )
 
                     }
                     IconButton(
                         onClick = {},
-                        modifier = Modifier.size(45.dp)
+                        modifier = Modifier
+                            .size(50.dp)
+                            .clip(shape = CutCornerShape(0.dp))
+                            .background(color = Color(0xFF2692EC))
                     ) {
                         Image(
                             painter = painterResource(id = R.drawable.letrapeque),
                             contentDescription = "Botón de leer la letra",
-                            modifier = Modifier.size(45.dp)
+                            modifier = Modifier
+                                .size(30.dp)
+                                .clip(shape = CutCornerShape(0.dp))
                         )
 
                     }
