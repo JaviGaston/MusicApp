@@ -169,12 +169,17 @@ fun MusicAppInterface() {
                     if (isPlaying.value) {
                         IconButton(
                             onClick = { isPlaying.value = false },
-                            modifier = Modifier.size(45.dp)
+                            modifier = Modifier
+                                .size(50.dp)
+                                .clip(shape = CutCornerShape(0.dp))
+                                .background(color = Color(0xFF2692EC))
                         ) {
                             Image(
                                 painter = painterResource(id = R.drawable.pausepeque),
                                 contentDescription = "Botón de pausa",
-                                modifier = Modifier.size(45.dp)
+                                modifier = Modifier
+                                    .size(30.dp)
+                                    .clip(shape = CutCornerShape(0.dp))
                             )
                         }
                     } else {
@@ -480,12 +485,17 @@ fun MusicAppInterfaceLandscape() {
                     if (isPlaying.value) {
                         IconButton(
                             onClick = { isPlaying.value = false },
-                            modifier = Modifier.size(45.dp)
+                            modifier = Modifier
+                                .size(50.dp)
+                                .clip(shape = CutCornerShape(0.dp))
+                                .background(color = Color(0xFF2692EC))
                         ) {
                             Image(
                                 painter = painterResource(id = R.drawable.pausepeque),
                                 contentDescription = "Botón de pausa",
-                                modifier = Modifier.size(45.dp)
+                                modifier = Modifier
+                                    .size(30.dp)
+                                    .clip(shape = CutCornerShape(0.dp))
                             )
                         }
                     } else {
